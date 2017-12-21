@@ -1,3 +1,5 @@
+# Based on code from http://code.activestate.com/lists/python-list/706954/
+
 import random, os, time
 from PIL import Image
 
