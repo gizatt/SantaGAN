@@ -19,7 +19,7 @@ import urllib2
 
 #This list is used to search keywords. You can edit this list to search for google images of your choice. You can simply add and remove elements of the list.
 #search_keyword = ['cozy christmas kitchen', 'cozy christmas living room', 'cozy christmas bedroom', 'cozy christmas bedroom', 'cozy christmas decorations', 'cozy christmas dinner', 'dinner', 'living room', 'kitchen', 'bedroom', 'empty apartment']
-search_keyword = ['tree', 'christmas tree']
+search_keyword = ['city street']
 
 #This list is used to further add suffix to your search term. Each element of the list will help you download 100 images. First element is blank which denotes that no suffix is added to the search keyword of the above list. You can edit the list by adding/deleting elements from it.So if the first element of the search_keyword is 'Australia' and the second element of keywords is 'high resolution', then it will search for 'Australia High Resolution'
 keywords = ['High Resolution']
