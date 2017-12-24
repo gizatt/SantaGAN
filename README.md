@@ -3,7 +3,7 @@ SantaGAN
 
 This repository contains some data collection tools and [limited] documentation concerning the application of [CycleGAN](https://junyanz.github.io/CycleGAN/) to a dataset of Christmas-related images.
 
-The intent is to train two networks -- referred to as the GrinchGAN and SantaGAN components -- that transform Christmas-related images to non-Christmas related images, and vice versa, regularized by a cyclic consistency loss. (That is, that an image transformed by Grinch and then Santa, or Santa and then Grinch, should be similar to the original image.) Perhaps such networks could be said to contain the Spirit of Christmas :).
+The intent is to train two generative adversarial networks -- referred to as the GrinchGAN and SantaGAN components -- that transform Christmas-related images to non-Christmas related images, and vice versa, regularized by a cyclic consistency loss. (That is, that an image transformed by Grinch and then Santa, or Santa and then Grinch, should be similar to the original image.) Perhaps such networks could be said to contain the Spirit of Christmas :).
 
 Results
 ------
@@ -46,6 +46,7 @@ The input set for the Christmas class contains diverse Christmas-related images 
 The input set for the non-Christmas class contains diverse indoor scenes as well as outdoor architectural and natural scenes (focused on trees). It contains 642 images total. The indoor decorations example subset has 170 examples, and an outdoor decorations example subset has 277 examples.
 ![Grinch Images Input](docs/grinch_4x4.png)
 
+I used the default parameters and configuration and setup in [this PyTorch implementation](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)). I did one training run per dataset (so a single run to 200 epochs). All images and results shown here are *in sample* (boo hiss).
 
 Prereqs:
 -------
