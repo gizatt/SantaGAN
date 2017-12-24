@@ -11,7 +11,7 @@ model_shorthand = {
   "outdoors": "christmas_decorations_outdoors_cyclegan",
 }
 
-N_wide = 4
+N_wide = 6
 
 in_model_forward = "all"
 in_set_forward = "test"
@@ -22,7 +22,7 @@ in_path_forwards = os.path.join(model_shorthand[in_model_forward], "%s_latest" %
 
 path_output = "santa_%dx%d.png" % (N_wide, N_wide)
 
-imgs = [os.path.join(in_path_forwards, "%05d_fake_A.png" % i) for i in in_index_forwards]
+imgs = [os.path.join(in_path_forwards, "%05d_fake_B.png" % i) for i in in_index_forwards]
 
 imgs_ims = [Image.open(im_path) for im_path in imgs]
 

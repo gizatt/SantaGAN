@@ -15,13 +15,18 @@ model_shorthand = {
 #in_set_forwards = ["test", "test", "test"]
 #in_index_forwards = [440, 9, 435]
 
-in_model_forwards = ["all", "all", "all"]
-in_set_forwards = ["test", "test", "test"]
-in_index_forwards = [444, 371, 149]
+#in_model_forwards = ["all", "all", "all"]
+#in_set_forwards = ["test", "test", "test"]
+#in_index_forwards = [444, 371, 149]
 
 #in_model_forwards = ["all", "all", "all"]
 #in_set_forwards = ["test", "test", "test"]
 #in_index_forwards = [387, 548, 34]
+
+N = 10
+in_model_forwards = ["all"]*N
+in_set_forwards = ["test"]*N
+in_index_forwards = random.sample(range(140), N)
 
 N = len(in_model_forwards)
 
@@ -31,6 +36,8 @@ in_path_forwards = [
 
 output_strings = ["%s_%s_%05d" % (in_model_forwards[i], in_set_forwards[i], in_index_forwards[i]) for i in range(N)]
 path_output = "santa_" + "_and_".join(output_strings) + ".png"
+if len(path_output) > 50:
+	path_output = "%s_santa_%dx2.png" % (in_model_forwards[0], N)
 
 forward_origs = [os.path.join(in_path_forwards[i], "%05d_real_B.png" % in_index_forwards[i])  for i in range(N)]
 forward_fakes = [os.path.join(in_path_forwards[i], "%05d_fake_A.png" % in_index_forwards[i]) for i in range(N)]
