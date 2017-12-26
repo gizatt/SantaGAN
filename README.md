@@ -1,6 +1,8 @@
 SantaGAN
 ==========
 
+![Summary](docs/summary.jpg)
+
 This repository contains some data collection tools and [limited] documentation concerning the application of [CycleGAN](https://junyanz.github.io/CycleGAN/) to a dataset of Christmas-related images.
 
 The intent is to train two generative adversarial networks -- referred to as the GrinchGAN and SantaGAN components -- that transform Christmas-related images to non-Christmas related images, and vice versa, regularized by a cyclic consistency loss. (That is, that an image transformed by Grinch and then Santa, or Santa and then Grinch, should be similar to the original image.) Perhaps such networks could be said to contain the Spirit of Christmas :).
